@@ -1,0 +1,182 @@
+@import url("https://fonts.googleapis.com/css2?family=Quicksand:wght@300;400;500;600;700&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Inter", sans-serif;
+  font-size: 62.5%;
+}
+body {
+  background-color: #e9ecef;
+}
+
+.signin-section {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 2px;
+  flex-wrap: wrap;
+  padding: 4rem 0;
+}
+
+@keyframes animate {
+  0% {
+    transform: translateY(-100%);
+  }
+  100% {
+    transform: translateY(100%);
+  }
+}
+
+.signin-section .signin {
+  width: 35%;
+  background: rgba(255, 255, 255, 0.3);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 60px;
+  border-radius: 40px;
+  backdrop-filter: blur(10px);
+  /* box-shadow: 0 15px 35px rgba(0, 0, 0, 0.3); */
+}
+
+.signin-section .signin .content {
+  position: relative;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  gap: 40px;
+}
+.signin-section .signin .content h2 {
+  font-size: 2rem;
+  color: #fa4f09;
+  text-transform: uppercase;
+  text-align: left;
+  width: 100%;
+}
+.signin-section .signin .content .form {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 25px;
+}
+.signin-section .signin .content .form .inputBox {
+  position: relative;
+  width: 100%;
+}
+.signin-section .signin .content .form .inputBox input {
+  position: relative;
+  width: 100%;
+  background: #333;
+  border: none;
+  outline: none;
+  padding: 25px 10px 7.5px;
+  border-radius: 4px;
+  color: #fff;
+  font-weight: 500;
+  font-size: 1.6rem;
+}
+.signin-section .signin .content .form .inputBox i {
+  position: absolute;
+  left: 0;
+  padding: 15px 10px;
+  font-style: normal;
+  color: #aaa;
+  transition: 0.5s;
+  pointer-events: none;
+  font-size: 1rem;
+}
+.signin .content .form .inputBox input:focus ~ i,
+.signin .content .form .inputBox input:valid ~ i {
+  transform: translateY(-7.5px);
+  font-size: 0.9rem;
+  color: #fff;
+}
+.signin .content .form .links {
+  position: relative;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+}
+.signin .content .form .links a {
+  font-size: 1.3rem;
+  color: #fff;
+  text-decoration: none;
+}
+.signin .content .form .links a:nth-child(2) {
+  color: #fa4f09;
+  font-weight: 600;
+}
+.signin .content .form .inputBox input[type="submit"] {
+  padding: 10px;
+  background: #fa4f09;
+  color: #000;
+  font-weight: 600;
+  font-size: 1.35rem;
+  letter-spacing: 0.05rem;
+  cursor: pointer;
+}
+input[type="submit"]:active {
+  opacity: 0.6;
+}
+
+/* BREAD -CRUMB */
+.breadcrumb {
+  display: flex;
+  flex-wrap: wrap;
+  width: 100%;
+  justify-content: center;
+  align-items: center;
+  padding: 0.75rem 1rem;
+  margin-bottom: 1rem;
+  list-style: none;
+  border-radius: 0.25rem;
+}
+
+.col-12 h2 {
+  text-align: center;
+  font-weight: 800;
+  font-size: 3.8rem;
+  line-height: 6.1rem;
+  letter-spacing: -0.022em;
+}
+.bread-crumb-links {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  padding: 0.75rem 1rem;
+  margin-bottom: 1rem;
+  list-style: none;
+  border-radius: 0.25rem;
+  gap: 10px;
+}
+.bread-crumb-links li {
+  display: flex;
+  align-items: center;
+  color: #212529;
+  font-size: 2rem;
+}
+.bread-crumb-links li a {
+  color: #212529;
+  text-decoration: none;
+}
+.bread-crumb-links li:first-child {
+  padding: 0.5rem;
+  background-color: #fa4f09;
+  opacity: 0.8;
+  color: #fff;
+  border-radius: 40%;
+}
+.bread-crumb-links li a:hover {
+  color: #fa4f09;
+}
+
+@media (max-width: 768px) {
+  .signin-section .signin {
+    width: 100%;
+    padding: 40px;
+  }
+}

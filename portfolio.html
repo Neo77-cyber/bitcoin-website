@@ -1,0 +1,496 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>My Crypto Dashboard</title>
+    <!-- ======= Styles ====== -->
+    <link rel="stylesheet" href="./css/dashboard.css" />
+  </head>
+
+  <body>
+    <!-- =============== Navigation ================ -->
+    <div class="container">
+      <div class="navigation">
+        <ul>
+          <li>
+            <a href="#">
+              <span class="icon">
+                <ion-icon name="logo-apple"></ion-icon>
+              </span>
+              <span class="title">Toka</span>
+            </a>
+          </li>
+
+          <li>
+            <a href="#">
+              <span class="icon">
+                <ion-icon name="home-outline"></ion-icon>
+              </span>
+              <span class="title dashboard-title">Dashboard</span>
+            </a>
+          </li>
+
+          <li>
+            <a href="#">
+              <span class="icon">
+                <ion-icon name="people-outline"></ion-icon>
+              </span>
+              <span class="title">Trading View</span>
+            </a>
+          </li>
+
+          <li>
+            <a href="#">
+              <span class="icon">
+                <ion-icon name="chatbubble-outline"></ion-icon>
+              </span>
+              <span class="title">ICO Distribution</span>
+            </a>
+          </li>
+
+          <li>
+            <a href="#">
+              <span class="icon">
+                <ion-icon name="help-outline"></ion-icon>
+              </span>
+              <span class="title">Buy and Sell Crypto</span>
+            </a>
+          </li>
+
+          <li>
+            <a href="#">
+              <span class="icon">
+                <ion-icon name="settings-outline"></ion-icon>
+              </span>
+              <span class="title">Mywallet</span>
+            </a>
+          </li>
+
+          <li>
+            <a href="#">
+              <span class="icon">
+                <ion-icon name="lock-closed-outline"></ion-icon>
+              </span>
+              <span class="title">Security</span>
+            </a>
+          </li>
+
+          <li>
+            <a href="#">
+              <span class="icon">
+                <ion-icon name="lock-closed-outline"></ion-icon>
+              </span>
+              <span class="title">Settings</span>
+            </a>
+          </li>
+
+          <li>
+            <a href="#">
+              <span class="icon">
+                <ion-icon name="lock-closed-outline"></ion-icon>
+              </span>
+              <span class="title">Support</span>
+            </a>
+          </li>
+
+          <li>
+            <a href="#">
+              <span class="icon">
+                <ion-icon name="log-out-outline"></ion-icon>
+              </span>
+              <span class="title">Sign Out</span>
+            </a>
+          </li>
+        </ul>
+      </div>
+
+      <!-- ========================= Main ==================== -->
+      <div class="main">
+        <div class="topbar">
+          <div class="toggle">
+            <ion-icon name="menu-outline"></ion-icon>
+          </div>
+
+          <div class="search">
+            <label>
+              <input type="text" placeholder="Search here" />
+              <ion-icon name="search-outline"></ion-icon>
+            </label>
+          </div>
+
+          <div class="user">
+            <img src="./assets/dashboard/customer01.jpg" alt="" />
+          </div>
+        </div>
+
+        <!-- ==================== Page Header ================== -->
+        <div class="pageHeader">
+          <h2>Dashboard</h2>
+        </div>
+
+        <!-- ======================= Cards ================== -->
+        <div class="cardBox">
+          <div class="card">
+            <div>
+              <div class="numbers">1.003747 BTC</div>
+              <div class="cardName">Wallet BTC balance</div>
+            </div>
+
+            <div class="iconBx">
+              <ion-icon name="logo-bitcoin"></ion-icon>
+            </div>
+          </div>
+
+          <div class="card">
+            <div>
+              <div class="numbers">5.19034 DASH</div>
+              <div class="cardName">Wallet DASH balance</div>
+            </div>
+
+            <div class="iconBx">
+              <ion-icon name="cart-outline"></ion-icon>
+            </div>
+          </div>
+
+          <div class="card">
+            <div>
+              <div class="numbers">12.60349 LTC</div>
+              <div class="cardName">Unconfiremed balance</div>
+            </div>
+
+            <div class="iconBx">
+              <ion-icon name="chatbubbles-outline"></ion-icon>
+            </div>
+          </div>
+
+          <!-- <div class="card">
+            <div>
+              <div class="numbers">$7,842</div>
+              <div class="cardName">Earning</div>
+            </div>
+
+            <div class="iconBx">
+              <ion-icon name="cash-outline"></ion-icon>
+            </div>
+          </div> -->
+        </div>
+
+        <!-- ================ Order Details List ================= -->
+        <div class="details">
+          <div class="buyCrypto">
+            <div class="cardHeader">
+              <h2>Buy Crypto</h2>
+              <a href="#" class="btn">View All</a>
+            </div>
+
+            <div id="buy-crypto">
+              <label>
+                Select the cryptocurrency
+                <span class="crypto-price">minimum value "0.001 BTC"</span>
+                <select id="crypto-select">
+                  <option value="BTC">Bitcoin</option>
+                  <option value="ETH">Ethereum</option>
+                  <option value="LTC">Litecoin</option>
+                  <!-- Add more options as needed -->
+                </select>
+              </label>
+
+              <label>
+                Choose payment method
+                <span class="crypto-price">minimum value "0.001 BTC"</span>
+                <select id="payment-method">
+                  <option class="option" value="bank">
+                    Bank of the galaxy
+                  </option>
+                  <option value="credit">Credit Card</option>
+                  <option value="paypal">PayPal</option>
+                  <!-- Add more options as needed -->
+                </select>
+              </label>
+
+              <div class="wallet-address-group">
+                <label for="wallet-address">Wallet Address:</label>
+                <input
+                  type="text"
+                  id="wallet-address"
+                  placeholder="0xsD12F32xW3deG5..."
+                />
+              </div>
+
+              <!-- Exchange operation section -->
+              <div id="exchange-operation">
+                <label>
+                  Amount in USD
+                  <input type="number" id="usd-amount" min="0" />
+                </label>
+                <img
+                  src="./assets/dashboard/exchange-arrows.png"
+                  width="32px"
+                  height="32px"
+                  alt="arrow"
+                  style="margin-top: 20px"
+                />
+                <label>
+                  Amount in BTC
+                  <input type="number" id="btc-amount" min="0" />
+                </label>
+              </div>
+
+              <!-- Buy button -->
+              <button id="buy-button">Buy Cryptocurrency</button>
+            </div>
+          </div>
+
+          <!-- ======== Copy CryPTO WALLET ADDRESS -->
+          <div class="wallet-addresses">
+            <h2>Wallet addresses</h2>
+            <div class="address">
+              <span>Ethereum wallet address:</span>
+              <p>
+                <span id="ethereumAddress">0xsD12F32xvW3deG5...</span>
+                <button onclick="copyToClipboard('ethereumAddress')">
+                  <ion-icon name="copy-outline"></ion-icon>
+                </button>
+              </p>
+            </div>
+
+            <div class="address">
+              <span class="address-title">Bitcoin wallet address:</span>
+              <p>
+                <span id="bitcoinAddress">0xsD12F32xvW3deG5...</span>
+                <button onclick="copyToClipboard('bitcoinAddress')">
+                  <ion-icon name="copy-outline"></ion-icon>
+                </button>
+              </p>
+            </div>
+            <div class="address">
+              <span>Litecoin wallet address:</span>
+              <p>
+                <span id="litecoinAddress">0xsD12F32xvW3deG5...</span>
+                <button
+                  id=" copy-btn"
+                  onclick="copyToClipboard('litecoinAddress')"
+                >
+                  <ion-icon name="copy-outline"></ion-icon>
+                </button>
+              </p>
+            </div>
+            <!-- Add more addresses as needed -->
+          </div>
+
+          <!-- <div class="recentOrders">
+            <div class="cardHeader">
+              <h2>Recent Orders</h2>
+              <a href="#" class="btn">View All</a>
+            </div>
+
+            <table>
+              <thead>
+                <tr>
+                  <td>Name</td>
+                  <td>Price</td>
+                  <td>Payment</td>
+                  <td>Status</td>
+                </tr>
+              </thead>
+
+              <tbody>
+                <tr>
+                  <td>Star Refrigerator</td>
+                  <td>$1200</td>
+                  <td>Paid</td>
+                  <td><span class="status delivered">Delivered</span></td>
+                </tr>
+
+                <tr>
+                  <td>Dell Laptop</td>
+                  <td>$110</td>
+                  <td>Due</td>
+                  <td><span class="status pending">Pending</span></td>
+                </tr>
+
+                <tr>
+                  <td>Apple Watch</td>
+                  <td>$1200</td>
+                  <td>Paid</td>
+                  <td><span class="status return">Return</span></td>
+                </tr>
+
+                <tr>
+                  <td>Addidas Shoes</td>
+                  <td>$620</td>
+                  <td>Due</td>
+                  <td><span class="status inProgress">In Progress</span></td>
+                </tr>
+
+                <tr>
+                  <td>Star Refrigerator</td>
+                  <td>$1200</td>
+                  <td>Paid</td>
+                  <td><span class="status delivered">Delivered</span></td>
+                </tr>
+
+                <tr>
+                  <td>Dell Laptop</td>
+                  <td>$110</td>
+                  <td>Due</td>
+                  <td><span class="status pending">Pending</span></td>
+                </tr>
+
+                <tr>
+                  <td>Apple Watch</td>
+                  <td>$1200</td>
+                  <td>Paid</td>
+                  <td><span class="status return">Return</span></td>
+                </tr>
+
+                <tr>
+                  <td>Addidas Shoes</td>
+                  <td>$620</td>
+                  <td>Due</td>
+                  <td><span class="status inProgress">In Progress</span></td>
+                </tr>
+              </tbody>
+            </table>
+          </div> -->
+
+          <!-- ================= New Customers ================ -->
+          <!-- <div class="recentCustomers">
+            <div class="cardHeader">
+              <h2>Recent Customers</h2>
+            </div>
+
+            <table>
+              <tr>
+                <td width="60px">
+                  <div class="imgBx">
+                    <img src="./assets/dashboard/customer02.jpg" alt="" />
+                  </div>
+                </td>
+                <td>
+                  <h4>
+                    David <br />
+                    <span>Italy</span>
+                  </h4>
+                </td>
+              </tr>
+
+              <tr>
+                <td width="60px">
+                  <div class="imgBx">
+                    <img src="./assets/dashboard/customer01.jpg" alt="" />
+                  </div>
+                </td>
+                <td>
+                  <h4>
+                    Amit <br />
+                    <span>India</span>
+                  </h4>
+                </td>
+              </tr>
+
+              <tr>
+                <td width="60px">
+                  <div class="imgBx">
+                    <img src="./assets/dashboard/customer02.jpg" alt="" />
+                  </div>
+                </td>
+                <td>
+                  <h4>
+                    David <br />
+                    <span>Italy</span>
+                  </h4>
+                </td>
+              </tr>
+
+              <tr>
+                <td width="60px">
+                  <div class="imgBx">
+                    <img src="./assets/dashboard/customer01.jpg" alt="" />
+                  </div>
+                </td>
+                <td>
+                  <h4>
+                    Amit <br />
+                    <span>India</span>
+                  </h4>
+                </td>
+              </tr>
+
+              <tr>
+                <td width="60px">
+                  <div class="imgBx">
+                    <img src="./assets/dashboard/customer02.jpg" alt="" />
+                  </div>
+                </td>
+                <td>
+                  <h4>
+                    David <br />
+                    <span>Italy</span>
+                  </h4>
+                </td>
+              </tr>
+
+              <tr>
+                <td width="60px">
+                  <div class="imgBx">
+                    <img src="./assets/dashboard/customer01.jpg" alt="" />
+                  </div>
+                </td>
+                <td>
+                  <h4>
+                    Amit <br />
+                    <span>India</span>
+                  </h4>
+                </td>
+              </tr>
+
+              <tr>
+                <td width="60px">
+                  <div class="imgBx">
+                    <img src="./assets/dashboard/customer01.jpg" alt="" />
+                  </div>
+                </td>
+                <td>
+                  <h4>
+                    David <br />
+                    <span>Italy</span>
+                  </h4>
+                </td>
+              </tr>
+
+              <tr>
+                <td width="60px">
+                  <div class="imgBx">
+                    <img src="./assets/dashboard/customer02.jpg" alt="" />
+                  </div>
+                </td>
+                <td>
+                  <h4>
+                    Amit <br />
+                    <span>India</span>
+                  </h4>
+                </td>
+              </tr>
+            </table>
+          </div> -->
+        </div>
+      </div>
+    </div>
+
+    <!-- =========== Scripts =========  -->
+    <script src="./js/dashboard.js"></script>
+
+    <!-- ====== ionicons ======= -->
+    <script
+      type="module"
+      src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"
+    ></script>
+    <script
+      nomodule
+      src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"
+    ></script>
+  </body>
+</html>
