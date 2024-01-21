@@ -178,7 +178,7 @@
         <!-- ================ Order Details List ================= -->
         <div class="details">
           <!-- ======== Buy Crypto ======== -->
-          <div class="buyCrypto">
+          <!-- <div class="buyCrypto">
             <div class="cardHeader">
               <h2>Buy Crypto</h2>
               <a href="#" class="btn">View All</a>
@@ -192,7 +192,6 @@
                   <option value="BTC">Bitcoin</option>
                   <option value="ETH">Ethereum</option>
                   <option value="LTC">Litecoin</option>
-                  <!-- Add more options as needed -->
                 </select>
               </label>
 
@@ -205,7 +204,6 @@
                   </option>
                   <option value="credit">Credit Card</option>
                   <option value="paypal">PayPal</option>
-                  <!-- Add more options as needed -->
                 </select>
               </label>
 
@@ -218,7 +216,6 @@
                 />
               </div>
 
-              <!-- Exchange operation section -->
               <div id="exchange-operation">
                 <label>
                   Amount in USD
@@ -237,45 +234,48 @@
                 </label>
               </div>
 
-              <!-- Buy button -->
               <button id="buy-button">Buy Cryptocurrency</button>
             </div>
-          </div>
+          </div> -->
 
           <!-- ======== Copy CryPTO WALLET ADDRESS -->
           <div class="wallet-addresses">
             <h2>Wallet addresses</h2>
-            <div class="address">
-              <span>Ethereum wallet address:</span>
-              <p>
-                <span id="ethereumAddress">0xsD12F32xvW3deG5...</span>
-                <button onclick="copyToClipboard('ethereumAddress')">
-                  <ion-icon name="copy-outline"></ion-icon>
-                </button>
-              </p>
+            <div class="sub-wallet-address">
+              <div class="address">
+                <span>Ethereum wallet address:</span>
+                <p>
+                  <span id="ethereumAddress">0xsD12F32xvW3deG5...</span>
+                  <button onclick="copyToClipboard('ethereumAddress')">
+                    <ion-icon name="copy-outline"></ion-icon>
+                  </button>
+                </p>
+              </div>
+
+              <div class="address">
+                <span class="address-title">Bitcoin wallet address:</span>
+                <p>
+                  <span id="bitcoinAddress">0xsD12F32xvW3deG5...</span>
+                  <button onclick="copyToClipboard('bitcoinAddress')">
+                    <ion-icon name="copy-outline"></ion-icon>
+                  </button>
+                </p>
+              </div>
+
+              <div class="address">
+                <span>Litecoin wallet address:</span>
+                <p>
+                  <span id="litecoinAddress">0xsD12F32xvW3deG5...</span>
+                  <button
+                    id=" copy-btn"
+                    onclick="copyToClipboard('litecoinAddress')"
+                  >
+                    <ion-icon name="copy-outline"></ion-icon>
+                  </button>
+                </p>
+              </div>
             </div>
 
-            <div class="address">
-              <span class="address-title">Bitcoin wallet address:</span>
-              <p>
-                <span id="bitcoinAddress">0xsD12F32xvW3deG5...</span>
-                <button onclick="copyToClipboard('bitcoinAddress')">
-                  <ion-icon name="copy-outline"></ion-icon>
-                </button>
-              </p>
-            </div>
-            <div class="address">
-              <span>Litecoin wallet address:</span>
-              <p>
-                <span id="litecoinAddress">0xsD12F32xvW3deG5...</span>
-                <button
-                  id=" copy-btn"
-                  onclick="copyToClipboard('litecoinAddress')"
-                >
-                  <ion-icon name="copy-outline"></ion-icon>
-                </button>
-              </p>
-            </div>
             <!-- Add more addresses as needed -->
           </div>
 

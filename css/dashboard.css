@@ -506,7 +506,6 @@ body {
 }
 
 /* ====================== COPY CRYPTO ADDRESS ========================== */
-.wallet-addresses,
 .buy-crypto-card {
   position: relative;
   min-height: 300px;
@@ -516,6 +515,22 @@ body {
   background: var(--white);
   box-shadow: 0 7px 25px rgba(0, 0, 0, 0.08);
   border-radius: 20px;
+}
+.wallet-addresses {
+  gap: 20px;
+  min-height: 300px;
+  width: 100%;
+  gap: 20px;
+  padding: 20px;
+  background: var(--white);
+  box-shadow: 0 7px 25px rgba(0, 0, 0, 0.08);
+  border-radius: 20px;
+}
+.sub-wallet-address {
+  width: 100%;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  gap: 20px;
 }
 .address {
   width: 100%;
@@ -746,6 +761,9 @@ body {
   }
   .status.inProgress {
     white-space: nowrap;
+  }
+  .sub-wallet-address {
+    grid-template-columns: 1fr;
   }
 }
 
